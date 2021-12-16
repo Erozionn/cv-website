@@ -96,7 +96,7 @@ p {
 }
 
 .animation {
-  $star-count: 500;
+  $star-count: 30;
   // --star-color: var(--primary-color);
   // --star-tail-length: 20px;
   // --star-tail-height: 20px;
@@ -220,6 +220,17 @@ p {
       margin-bottom: 20px;
     }
 
+    .skills {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li:not(.sub-title) {
+        margin-right: 10px;
+        color: $textColor;
+      }
+    }
+
     >div {
       display: flex;
       margin-bottom: 25px;
@@ -245,9 +256,22 @@ p {
       }
 
       div.value {
+        >div:not(:last-child) {
+          margin-bottom: 25px;
+        }
+
         li {
           color: $textColor;
           margin-left: 20px;
+
+          a {
+            color: $textColor;
+            text-decoration: underline;
+  
+            &:hover {
+              color: #fff;
+            }
+          }
         }
 
         span {
